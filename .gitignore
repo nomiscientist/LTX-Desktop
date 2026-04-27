@@ -51,8 +51,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment
-.env
-.env.local
 .env.*.local
 
 # Testing
@@ -87,3 +85,4 @@ python-embed/
 
 # Downloaded during CI for Windows NSIS installer
 resources/vc_redist.x64.exe
+config.bat
